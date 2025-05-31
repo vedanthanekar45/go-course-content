@@ -1,0 +1,9 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./simplebank/db/queries"
+    schema: "./simplebank/db/migration"
+    gen:
+      go:
+        package: "db"
+        out: "./simplebank/db/sqlc"
